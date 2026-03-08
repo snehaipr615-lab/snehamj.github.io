@@ -46,13 +46,20 @@
     background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 60px 60px; opacity: 0.3;
   }
-  .hero-content { position: relative; max-width: 800px; }
+  .hero-content { position: relative; max-width: 1100px; display: flex; align-items: center; gap: 5rem; }
+  .hero-text { flex: 1; }
+  .hero-photo { flex-shrink: 0; width: 260px; height: 260px; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent); box-shadow: 0 0 40px rgba(201,168,76,0.2); opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
   .hero-tag { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
   .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 900; line-height: 1; margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
   .hero-name span { color: var(--accent); }
   .hero-title { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; letter-spacing: 0.5px; opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
   .hero-bio { font-size: 1rem; line-height: 1.8; color: #b0ae9a; max-width: 600px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 1s forwards; }
+  .hero-inner { display: flex; align-items: center; gap: 4rem; width: 100%; max-width: 1100px; position: relative; }
+  .hero-text { flex: 1; }
+  .hero-photo { flex-shrink: 0; width: 240px; height: 240px; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent); box-shadow: 0 0 50px rgba(201,168,76,0.25); opacity: 0; animation: fadeUp 0.8s 0.5s forwards; }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
   .btn-primary { padding: 0.85rem 2rem; background: var(--accent); color: #0a0a0f; font-weight: 500; font-size: 0.82rem; letter-spacing: 1px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; font-family: 'DM Mono', monospace; }
   .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
   .btn-outline { padding: 0.85rem 2rem; border: 1px solid var(--border); color: var(--muted); font-size: 0.82rem; letter-spacing: 1px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; font-family: 'DM Mono', monospace; }
@@ -156,14 +163,19 @@
 <section id="home">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-content">
-    <p class="hero-tag">// Patent Analyst · IP Research Specialist</p>
-    <h1 class="hero-name">Sneha <span>M J</span></h1>
-    <p class="hero-title">Patentability · FTO Analysis · Prior Art Search · IPC/CPC Classification</p>
-    <p class="hero-bio">Patent Analyst with hands-on experience in end-to-end IP research across Indian, U.S., and European jurisdictions. Translating complex technical disclosures into structured IP insights that support strategic filing decisions.</p>
-    <div class="hero-btns">
-      <a href="#experience" class="btn-primary">View Experience</a>
-      <a href="#contact" class="btn-outline">Contact Me</a>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-tag">// Patent Analyst · IP Research Specialist</p>
+      <h1 class="hero-name">Sneha <span>M J</span></h1>
+      <p class="hero-title">Patentability · FTO Analysis · Prior Art Search · IPC/CPC Classification</p>
+      <p class="hero-bio">Patent Analyst with hands-on experience in end-to-end IP research across Indian, U.S., and European jurisdictions. Translating complex technical disclosures into structured IP insights that support strategic filing decisions.</p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn-primary">View Experience</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://media.licdn.com/dms/image/v2/D5635AQH8Yx5XnkGASQ/profile-framedphoto-shrink_800_800/B56Zy9zSu.IIAg-/0/1772710866177?e=1773608400&v=beta&t=YGEhHtnnhLsynkbFGd75P0jSwn0n2bbOCPpH1MoSsCU" alt="Sneha M J" />
     </div>
   </div>
 </section>
@@ -260,10 +272,10 @@
   <div class="divider"></div>
   <div class="timeline">
     <div class="timeline-item reveal">
-      <div class="timeline-date">APR 2025 — JUL 2025</div>
+      <div class="timeline-date">APR 2025 — PRESENT</div>
       <h3 class="timeline-role">Patent Analyst Intern</h3>
       <p class="timeline-org">Indian Institute of Patent and Trademark (IIPTA), Delhi</p>
-      <p class="timeline-desc">Conducted end-to-end IP research across Indian, U.S., and European patent systems — spanning prior art searches, patentability assessments, FTO and infringement analysis, claim mapping, and docketing support using 9+ patent databases.</p>
+      <p class="timeline-desc">Conducting end-to-end IP research across Indian, U.S., and European patent systems — spanning prior art searches, patentability assessments, FTO and infringement analysis, claim mapping, and docketing support using 9+ patent databases.</p>
       <ul class="timeline-bullets">
         <li>Conducted 15+ prior art and patentability searches across USPTO, Espacenet, and Patentscope with a consistent 3–5 day turnaround, contributing directly to 10+ client patentability opinion reports.</li>
         <li>Performed FTO and infringement analyses for 5+ technology domains including chemistry, pharmaceuticals, and biotechnology — identifying claim overlaps and freedom zones across India, U.S., and EU.</li>
@@ -272,14 +284,24 @@
       </ul>
     </div>
     <div class="timeline-item reveal">
-      <div class="timeline-date">2024 — 2025</div>
-      <h3 class="timeline-role">Patent Research Trainee</h3>
+      <div class="timeline-date">APR 2025 — PRESENT</div>
+      <h3 class="timeline-role">Patent Law & IP Certification Student</h3>
       <p class="timeline-org">Lawsikho — Online IP Training Program</p>
-      <p class="timeline-desc">Completed intensive training in patent law, IP research methodologies, and database search strategies across multiple technology sectors.</p>
+      <p class="timeline-desc">Currently pursuing two certification courses simultaneously alongside IIPTA internship, building advanced IP research and career skills.</p>
       <ul class="timeline-bullets">
-        <li>Trained in advanced Boolean and proximity search techniques across major global patent databases.</li>
-        <li>Developed proficiency in patent claim interpretation and mapping for chemical and biotech inventions.</li>
-        <li>Practiced drafting structured IP reports including patentability opinions and landscape analyses.</li>
+        <li>Pursuing <strong style="color:var(--accent2)">Patent Law & Analysis (USPTO)</strong> — covering Searches, Specifications, Prosecution, Litigation and Licensing.</li>
+        <li>Enrolled in <strong style="color:var(--accent2)">International Job Hunt Accelerator Program</strong> — developing global IP career strategy and professional branding.</li>
+        <li>Applying learnings directly in real-time at IIPTA internship across patent searches and IP report writing.</li>
+      </ul>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">DEC 2024 — APR 2025</div>
+      <h3 class="timeline-role">Private Tutor — Mathematics & Physics</h3>
+      <p class="timeline-org">Independent · Mysore, Karnataka</p>
+      <p class="timeline-desc">Provided personalized academic coaching in Mathematics and Physics to school-level students, developing strong communication, analytical, and mentoring skills.</p>
+      <ul class="timeline-bullets">
+        <li>Designed customized study plans and problem-solving sessions tailored to individual student needs and learning pace.</li>
+        <li>Strengthened ability to explain complex concepts clearly — a skill directly transferable to patent claim interpretation and IP report writing.</li>
       </ul>
     </div>
   </div>
@@ -292,24 +314,34 @@
   <div class="divider"></div>
   <div class="edu-grid">
     <div class="edu-card reveal">
-      <div class="edu-year">DEGREE</div>
-      <h3 class="edu-degree">Bachelor of Science — Chemistry</h3>
-      <p class="edu-school">Technical foundation enabling precise claim interpretation across pharmaceutical, biotechnology, and chemical patent domains.</p>
+      <div class="edu-year">2020 — 2022</div>
+      <h3 class="edu-degree">Master of Science — General Chemistry</h3>
+      <p class="edu-school">University of Mysore<br>Advanced study in chemical sciences providing deep technical foundation for pharmaceutical, biotechnology, and materials patent analysis.</p>
     </div>
     <div class="edu-card reveal">
-      <div class="edu-year">CERTIFICATION</div>
-      <h3 class="edu-degree">Patent Law & IP Research</h3>
-      <p class="edu-school">Indian Institute of Patent and Trademark (IIPTA)<br>Comprehensive training in patent prosecution, IP strategy, and global patent systems.</p>
+      <div class="edu-year">2022 — 2024</div>
+      <h3 class="edu-degree">Bachelor of Education (B.Ed)</h3>
+      <p class="edu-school">University of Mysore<br>Professional teacher training developing strong analytical, communication, and curriculum design skills applicable to IP research and client reporting.</p>
     </div>
     <div class="edu-card reveal">
-      <div class="edu-year">CERTIFICATION</div>
-      <h3 class="edu-degree">IP Analytics & Patent Searching</h3>
-      <p class="edu-school">Lawsikho Online Program<br>Advanced training in patent analytics, FTO analysis, Boolean search strategy, and landscape reporting.</p>
+      <div class="edu-year">IN PROGRESS</div>
+      <h3 class="edu-degree">Patent Law & IP Research Certification</h3>
+      <p class="edu-school">Indian Institute of Patent and Trademark (IIPTA)<br>Comprehensive training in patent prosecution, IP strategy, and global patent systems. Certificate awaited.</p>
     </div>
     <div class="edu-card reveal">
-      <div class="edu-year">ONGOING</div>
-      <h3 class="edu-degree">Continuous Professional Development</h3>
-      <p class="edu-school">Actively pursuing updates in IP law amendments, USPTO/EPO examination guidelines, and AI-assisted patent analytics tools.</p>
+      <div class="edu-year">IN PROGRESS</div>
+      <h3 class="edu-degree">Patent Law & Analysis (USPTO)</h3>
+      <p class="edu-school">Lawsikho Online Program<br>Covering Searches, Specifications, Prosecution, Litigation and Licensing. Certificate awaited.</p>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-year">IN PROGRESS</div>
+      <h3 class="edu-degree">International Job Hunt Accelerator</h3>
+      <p class="edu-school">Lawsikho Online Program<br>Global IP career strategy, professional branding, and international job market preparation.</p>
+    </div>
+    <div class="edu-card reveal">
+      <div class="edu-year">IN PROGRESS</div>
+      <h3 class="edu-degree">WIPO Distance Learning — DL-101</h3>
+      <p class="edu-school">World Intellectual Property Organization (WIPO)<br>Foundational course in intellectual property covering patents, trademarks, copyright, and IP strategy.</p>
     </div>
   </div>
 </section>
@@ -355,13 +387,13 @@
       <h3>Get In Touch</h3>
       <div class="contact-item"><span>📍</span><span>India</span></div>
       <div class="contact-item"><span>💼</span><span><a href="https://linkedin.com" target="_blank">LinkedIn — Sneha M J</a></span></div>
-      <div class="contact-item"><span>📧</span><span><a href="mailto:snehamj@email.com">snehamj@email.com</a></span></div>
+      <div class="contact-item"><span>📧</span><span><a href="/cdn-cgi/l/email-protection#b9cad7dcd1d8d4d3f9dcd4d8d0d597dad6d4"><span class="__cf_email__" data-cfemail="e0938e8588818d8aa0858d81898cce838f8d">[email&#160;protected]</span></a></span></div>
       <div class="contact-item"><span>🔍</span><span>Open to Patent Analyst & IP Research Roles</span></div>
     </div>
     <div class="contact-cta reveal">
       <h3>Available for Opportunities</h3>
       <p>I am actively seeking Patent Analyst and IP Research roles. With experience across global patent systems and a strong technical background in Chemistry, I bring analytical precision and domain expertise to every IP project.</p>
-      <a href="mailto:snehamj@email.com" class="btn-primary" style="align-self:flex-start;">Send a Message</a>
+      <a href="/cdn-cgi/l/email-protection#a3d0cdc6cbc2cec9e3c6cec2cacf8dc0ccce" class="btn-primary" style="align-self:flex-start;">Send a Message</a>
     </div>
   </div>
 </section>
@@ -371,7 +403,7 @@
   <p>Crafted for IP Excellence</p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
@@ -379,11 +411,4 @@
 
   const sections = document.querySelectorAll('section');
   const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(s => { if(window.scrollY >= s.offsetTop - 100) current = s.id; });
-    navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#'+current ? 'var(--accent)' : ''; });
-  });
-</script>
-</body>
-</html>
+  window.addEventL

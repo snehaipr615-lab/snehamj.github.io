@@ -32,23 +32,12 @@
   .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.78rem; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; font-family: 'DM Mono', monospace; }
   .nav-links a:hover { color: var(--accent); }
 
-  #home {
-    min-height: 100vh; display: flex; align-items: center;
-    padding: 8rem 4rem 4rem; position: relative; overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(201,168,76,0.07) 0%, transparent 70%),
-                radial-gradient(ellipse 40% 40% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
-  }
-  .hero-grid {
-    position: absolute; inset: 0;
-    background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
-    background-size: 60px 60px; opacity: 0.3;
-  }
-  .hero-content { position: relative; max-width: 1100px; display: flex; align-items: center; gap: 5rem; }
+  #home { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 4rem; position: relative; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 80% 50%, rgba(201,168,76,0.07) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 60%); }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 60px 60px; opacity: 0.3; }
+  .hero-inner { display: flex; align-items: center; gap: 4rem; width: 100%; max-width: 1100px; position: relative; }
   .hero-text { flex: 1; }
-  .hero-photo { flex-shrink: 0; width: 260px; height: 260px; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent); box-shadow: 0 0 40px rgba(201,168,76,0.2); opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
+  .hero-photo { flex-shrink: 0; width: 240px; height: 240px; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent); box-shadow: 0 0 50px rgba(201,168,76,0.25); opacity: 0; animation: fadeUp 0.8s 0.5s forwards; }
   .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
   .hero-tag { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--accent); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
   .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 900; line-height: 1; margin-bottom: 1rem; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
@@ -56,10 +45,6 @@
   .hero-title { font-size: 1rem; color: var(--muted); margin-bottom: 2rem; letter-spacing: 0.5px; opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
   .hero-bio { font-size: 1rem; line-height: 1.8; color: #b0ae9a; max-width: 600px; margin-bottom: 2.5rem; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.8s 1s forwards; }
-  .hero-inner { display: flex; align-items: center; gap: 4rem; width: 100%; max-width: 1100px; position: relative; }
-  .hero-text { flex: 1; }
-  .hero-photo { flex-shrink: 0; width: 240px; height: 240px; border-radius: 50%; overflow: hidden; border: 3px solid var(--accent); box-shadow: 0 0 50px rgba(201,168,76,0.25); opacity: 0; animation: fadeUp 0.8s 0.5s forwards; }
-  .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
   .btn-primary { padding: 0.85rem 2rem; background: var(--accent); color: #0a0a0f; font-weight: 500; font-size: 0.82rem; letter-spacing: 1px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; font-family: 'DM Mono', monospace; }
   .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
   .btn-outline { padding: 0.85rem 2rem; border: 1px solid var(--border); color: var(--muted); font-size: 0.82rem; letter-spacing: 1px; text-decoration: none; text-transform: uppercase; transition: all 0.3s; font-family: 'DM Mono', monospace; }
@@ -70,6 +55,7 @@
   .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; margin-bottom: 1rem; line-height: 1.2; }
   .divider { width: 60px; height: 2px; background: var(--accent); margin-bottom: 3rem; }
 
+  /* ABOUT */
   #about { background: var(--surface); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
   .about-text p { color: #b0ae9a; line-height: 1.9; margin-bottom: 1.2rem; font-size: 0.97rem; }
@@ -82,6 +68,7 @@
   .list-items li { padding: 0.65rem 0; border-bottom: 1px solid var(--border); color: #b0ae9a; font-size: 0.9rem; display: flex; align-items: center; gap: 0.7rem; }
   .list-items li::before { content: '▸'; color: var(--accent); }
 
+  /* SKILLS */
   #skills { background: var(--bg); }
   .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
   .skill-card { padding: 2rem; background: var(--card); border: 1px solid var(--border); transition: border-color 0.3s, transform 0.3s; }
@@ -91,6 +78,7 @@
   .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .tag { padding: 0.3rem 0.7rem; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); font-size: 0.72rem; color: var(--accent); font-family: 'DM Mono', monospace; letter-spacing: 0.5px; }
 
+  /* EXPERIENCE */
   #experience { background: var(--surface); }
   .timeline { position: relative; padding-left: 2rem; }
   .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 1px; background: var(--border); }
@@ -104,6 +92,7 @@
   .timeline-bullets li { color: #b0ae9a; font-size: 0.88rem; line-height: 1.7; padding: 0.35rem 0 0.35rem 1.2rem; position: relative; }
   .timeline-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
 
+  /* EDUCATION */
   #education { background: var(--bg); }
   .edu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .edu-card { padding: 2rem; border: 1px solid var(--border); background: var(--card); transition: border-color 0.3s; }
@@ -111,14 +100,27 @@
   .edu-year { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 0.7rem; }
   .edu-degree { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 0.5rem; }
   .edu-school { color: var(--muted); font-size: 0.85rem; line-height: 1.6; }
+  .edu-detail { color: #b0ae9a; font-size: 0.82rem; margin-top: 0.6rem; font-style: italic; line-height: 1.6; }
 
+  /* PROJECTS */
   #projects { background: var(--surface); }
   .project-card { padding: 2.5rem; border: 1px solid var(--border); background: var(--card); margin-bottom: 2rem; transition: border-color 0.3s; }
   .project-card:hover { border-color: var(--accent); }
   .project-card h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; margin-bottom: 0.8rem; color: var(--accent2); }
   .project-card p { color: #b0ae9a; line-height: 1.8; font-size: 0.92rem; margin-top: 0.8rem; }
 
-  #contact { background: var(--bg); }
+  /* CERTIFICATIONS */
+  #certifications { background: var(--bg); }
+  .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .cert-card { padding: 1.5rem 1.8rem; border: 1px solid var(--border); background: var(--card); transition: border-color 0.3s, transform 0.3s; }
+  .cert-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .cert-status { font-family: 'DM Mono', monospace; font-size: 0.62rem; color: var(--accent); letter-spacing: 2px; margin-bottom: 0.6rem; text-transform: uppercase; }
+  .cert-status.done { color: #72c472; }
+  .cert-name { font-family: 'Playfair Display', serif; font-size: 0.98rem; margin-bottom: 0.4rem; line-height: 1.4; }
+  .cert-org { color: var(--muted); font-size: 0.8rem; }
+
+  /* CONTACT */
+  #contact { background: var(--surface); }
   .contact-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
   .contact-info h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.5rem; }
   .contact-item { display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--border); color: #b0ae9a; font-size: 0.9rem; }
@@ -132,14 +134,17 @@
   footer p { color: var(--muted); font-size: 0.78rem; font-family: 'DM Mono', monospace; }
 
   @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-  .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
 
   @media (max-width: 900px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { gap: 1rem; }
     section { padding: 4rem 1.5rem; }
     #home { padding: 7rem 1.5rem 4rem; }
-    .about-grid, .contact-wrapper, .edu-grid, .skills-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-grid, .contact-wrapper, .edu-grid, .skills-grid, .cert-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-inner { flex-direction: column-reverse; gap: 2rem; }
+    .hero-photo { width: 160px; height: 160px; }
   }
 </style>
 </head>
@@ -154,6 +159,7 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -166,11 +172,11 @@
     <div class="hero-text">
       <p class="hero-tag">// Patent Analyst · IP Research Specialist</p>
       <h1 class="hero-name">Sneha <span>M J</span></h1>
-      <p class="hero-title">Patentability · FTO Analysis · Prior Art Search · IPC/CPC Classification</p>
-      <p class="hero-bio">Patent Analyst with hands-on experience in end-to-end IP research across Indian, U.S., and European jurisdictions. Translating complex technical disclosures into structured IP insights that support strategic filing decisions.</p>
+      <p class="hero-title">Patentability · FTO Analysis · Prior Art Search · Claim Drafting · IPC/CPC Classification</p>
+      <p class="hero-bio">Patent Analyst Intern with hands-on experience in prior art searches, patentability assessments, FTO analysis, and infringement research across Indian, U.S., and European jurisdictions. Proficient in 9+ major patent databases with a strong technical foundation in Chemistry enabling precise claim interpretation and landscape analysis.</p>
       <div class="hero-btns">
         <a href="#experience" class="btn-primary">View Experience</a>
-        <a href="#contact" class="btn-outline">Contact Me</a>
+        <a href="/cdn-cgi/l/email-protection#54273a313c353d2426626561143339353d387a373b39" class="btn-outline">Contact Me</a>
       </div>
     </div>
     <div class="hero-photo">
@@ -184,34 +190,35 @@
   <div class="section-label">// 01. About</div>
   <div class="about-grid">
     <div class="about-text reveal">
-      <h2 class="section-title">Bridging Science & Intellectual Property</h2>
+      <h2 class="section-title">Bridging Science &amp; Intellectual Property</h2>
       <div class="divider"></div>
-      <p>I am a Patent Analyst with a strong technical foundation across Chemistry, Pharmaceuticals, Biotechnology, and Materials Science — enabling precise claim interpretation and landscape analysis across diverse scientific domains.</p>
-      <p>My expertise spans the full spectrum of IP research and prosecution — from prior art searches and patentability assessments to drafting patent applications, FTO analysis, opposition proceedings, and FER responses across 9+ major patent databases.</p>
+      <p>I am a Patent Analyst Intern with a strong technical foundation in Chemistry, Pharmaceuticals, Biotechnology, and Materials Science — enabling precise claim interpretation and landscape analysis across diverse scientific domains.</p>
+      <p>My expertise spans the full spectrum of IP research — from prior art searches and patentability assessments to drafting patent specifications, FTO analysis, opposition proceedings, and FER response drafting across 9+ patent databases including USPTO Public Search, Espacenet, KIPRIS, and Google Patents.</p>
+      <p>I contributed to patentability and prior art search reports at IIPTA and Lawsikho, demonstrating accuracy in IPC/CPC classification, claim mapping, and docketing support — delivering structured IP insights that support strategic filing decisions.</p>
       <div class="about-stats">
-        <div class="stat-box"><div class="stat-num">15+</div><div class="stat-label">Patent Searches Conducted</div></div>
+        <div class="stat-box"><div class="stat-num">10+</div><div class="stat-label">Prior Art Searches Conducted</div></div>
         <div class="stat-box"><div class="stat-num">9+</div><div class="stat-label">Patent Databases</div></div>
         <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">Jurisdictions Covered</div></div>
         <div class="stat-box"><div class="stat-num">5+</div><div class="stat-label">Tech Domains Analyzed</div></div>
       </div>
     </div>
     <div class="about-right reveal">
-      <h3>Jurisdictions & Core Expertise</h3>
+      <h3>Jurisdictions &amp; Core Expertise</h3>
       <ul class="list-items">
-        <li>Indian Patent System (IPO Filing & Prosecution)</li>
+        <li>Indian Patent System (IPO Filing &amp; Prosecution)</li>
         <li>United States Patent System (USPTO)</li>
         <li>European Patent System (EPO / Espacenet)</li>
         <li>PCT Applications (WIPO / Patentscope)</li>
-        <li>IPC / CPC Classification & Mapping</li>
-        <li>Claim Mapping & Validity Analysis</li>
-        <li>FTO & Infringement Research</li>
-        <li>Drafting Independent & Dependent Claims</li>
-        <li>Drafting All Sections of Patent Application</li>
-        <li>Drafting FER (First Examination Report) Response</li>
-        <li>Identifying Grounds of Opposition</li>
-        <li>Drafting Opposition Statements</li>
-        <li>Patent Docketing & Documentation</li>
-        <li>IP Landscape & Competitive Intelligence</li>
+        <li>IPC / CPC Classification &amp; Mapping</li>
+        <li>Claim Mapping &amp; Validity/Invalidity Analysis</li>
+        <li>FTO &amp; Infringement Research</li>
+        <li>Drafting Independent &amp; Dependent Claims</li>
+        <li>Patent Specification Writing &amp; Abstract Drafting</li>
+        <li>FER (First Examination Report) Response Drafting</li>
+        <li>Opposition Statement Drafting</li>
+        <li>Patent Docketing &amp; Documentation</li>
+        <li>IP Landscape &amp; Competitive Intelligence</li>
+        <li>Boolean &amp; Proximity Search Strategies</li>
       </ul>
     </div>
   </div>
@@ -232,17 +239,17 @@
         <span class="tag">FTO Analysis</span>
         <span class="tag">Infringement Research</span>
         <span class="tag">Claim Mapping</span>
+        <span class="tag">Claim Drafting (Ind. &amp; Dep.)</span>
         <span class="tag">Validity/Invalidity Search</span>
         <span class="tag">IPC/CPC Classification</span>
         <span class="tag">Prosecution Support</span>
         <span class="tag">IP Landscape Report</span>
         <span class="tag">Patentability Opinion</span>
-        <span class="tag">Drafting FER Response</span>
-        <span class="tag">Identifying Grounds of Opposition</span>
-        <span class="tag">Drafting Opposition Statements</span>
-        <span class="tag">Drafting Independent Claims</span>
-        <span class="tag">Drafting Dependent Claims</span>
-        <span class="tag">Drafting Patent Applications</span>
+        <span class="tag">FER Response Drafting</span>
+        <span class="tag">Opposition Statement Drafting</span>
+        <span class="tag">Patent Specification Writing</span>
+        <span class="tag">Abstract Drafting</span>
+        <span class="tag">Patent Docketing</span>
       </div>
     </div>
     <div class="skill-card reveal">
@@ -252,12 +259,11 @@
         <span class="tag">USPTO Public Search</span>
         <span class="tag">Espacenet</span>
         <span class="tag">Google Patents</span>
-        <span class="tag">Derwent Innovation</span>
         <span class="tag">Patentscope (WIPO)</span>
         <span class="tag">Indian Patent Search</span>
-        <span class="tag">Orbit Intelligence</span>
-        <span class="tag">PatSnap</span>
+        <span class="tag">KIPRIS</span>
         <span class="tag">Lens.org</span>
+
       </div>
     </div>
     <div class="skill-card reveal">
@@ -269,13 +275,10 @@
         <span class="tag">Biotechnology</span>
         <span class="tag">Materials Science</span>
         <span class="tag">Mechanical Engineering</span>
-        <span class="tag">Electronics & IoT</span>
+        <span class="tag">Electronics &amp; IoT</span>
         <span class="tag">Healthcare Technology</span>
-        <span class="tag">Food Technology</span>
         <span class="tag">Nanotechnology</span>
-      </div>
-    </div>
-        <span class="tag">Healthcare Technology</span>
+        <span class="tag">Food Technology</span>
       </div>
     </div>
   </div>
@@ -287,39 +290,32 @@
   <h2 class="section-title">Professional Journey</h2>
   <div class="divider"></div>
   <div class="timeline">
+
     <div class="timeline-item reveal">
       <div class="timeline-date">APR 2025 — PRESENT</div>
       <h3 class="timeline-role">Patent Analyst Intern</h3>
       <p class="timeline-org">Indian Institute of Patent and Trademark (IIPTA), Delhi</p>
       <p class="timeline-desc">Conducting end-to-end IP research across Indian, U.S., and European patent systems — spanning prior art searches, patentability assessments, FTO and infringement analysis, claim mapping, and docketing support using 9+ patent databases.</p>
       <ul class="timeline-bullets">
-        <li>Conducted 15+ prior art and patentability searches across USPTO, Espacenet, and Patentscope with a consistent 3–5 day turnaround, contributing directly to 10+ client patentability opinion reports.</li>
-        <li>Performed FTO and infringement analyses for 5+ technology domains including chemistry, pharmaceuticals, and biotechnology — identifying claim overlaps and freedom zones across India, U.S., and EU.</li>
-        <li>Delivered claim mapping and validity-invalidity search reports, applying IPC/CPC classification to benchmark patents within competitive landscapes.</li>
-        <li>Supported Indian patent filing and docketing procedures, ensuring accurate documentation of prosecution timelines across active client cases.</li>
+        <li>Conducted 10+ prior art and patentability searches across USPTO, Espacenet, and Patentscope with a consistent 3–5 day turnaround.</li>
+        <li>Performed Freedom-to-Operate (FTO) and infringement analyses for 5+ technology domains including chemistry, pharmaceuticals, and biotechnology — identifying claim overlaps and freedom zones across India, U.S., and EU.</li>
+        <li>Delivered claim mapping and validity-invalidity search reports, applying IPC/CPC classification to categorize and benchmark patents within competitive landscapes.</li>
+        <li>Supported Indian patent filing and docketing procedures with accurate documentation of prosecution timelines and maintained organized patent records.</li>
       </ul>
     </div>
+
     <div class="timeline-item reveal">
       <div class="timeline-date">APR 2025 — PRESENT</div>
-      <h3 class="timeline-role">Patent Law & IP Certification Student</h3>
+      <h3 class="timeline-role">Patent Research Trainee</h3>
       <p class="timeline-org">Lawsikho — Online IP Training Program</p>
-      <p class="timeline-desc">Currently pursuing two certification courses simultaneously alongside IIPTA internship, building advanced IP research and career skills.</p>
+      <p class="timeline-desc">Undergoing intensive hands-on training in USPTO patent law and analysis, directly applying practical skills in real-world IP work at IIPTA internship simultaneously.</p>
       <ul class="timeline-bullets">
-        <li>Pursuing <strong style="color:var(--accent2)">Patent Law & Analysis (USPTO)</strong> — covering Searches, Specifications, Prosecution, Litigation and Licensing.</li>
-        <li>Enrolled in <strong style="color:var(--accent2)">International Job Hunt Accelerator Program</strong> — developing global IP career strategy and professional branding.</li>
-        <li>Applying learnings directly in real-time at IIPTA internship across patent searches and IP report writing.</li>
+        <li>Practising patent searching, claim drafting, specification writing, and FER response drafting through real case-based assignments.</li>
+        <li>Covering U.S. patent prosecution procedure, patent licensing, litigation affairs, and filing strategy.</li>
+        <li>Skills developed are actively applied across patent searches and IP report writing at IIPTA.</li>
       </ul>
     </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-date">DEC 2024 — APR 2025</div>
-      <h3 class="timeline-role">Private Tutor — Mathematics & Physics</h3>
-      <p class="timeline-org">Independent · Mysore, Karnataka</p>
-      <p class="timeline-desc">Provided personalized academic coaching in Mathematics and Physics to school-level students, developing strong communication, analytical, and mentoring skills.</p>
-      <ul class="timeline-bullets">
-        <li>Designed customized study plans and problem-solving sessions tailored to individual student needs and learning pace.</li>
-        <li>Strengthened ability to explain complex concepts clearly — a skill directly transferable to patent claim interpretation and IP report writing.</li>
-      </ul>
-    </div>
+
   </div>
 </section>
 
@@ -331,33 +327,21 @@
   <div class="edu-grid">
     <div class="edu-card reveal">
       <div class="edu-year">2020 — 2022</div>
-      <h3 class="edu-degree">Master of Science — General Chemistry</h3>
-      <p class="edu-school">University of Mysore<br>Advanced study in chemical sciences providing deep technical foundation for pharmaceutical, biotechnology, and materials patent analysis.</p>
+      <h3 class="edu-degree">M.Sc. — General Chemistry</h3>
+      <p class="edu-school">University of Mysore &nbsp;·&nbsp; CGPA: 8.04</p>
+      <p class="edu-detail">Dissertation: "Synthesis of Boc-Glycine Intermediate" — executed multi-step organic synthesis; applied TLC to monitor reaction progress and verify purity.</p>
     </div>
     <div class="edu-card reveal">
       <div class="edu-year">2022 — 2024</div>
-      <h3 class="edu-degree">Bachelor of Education (B.Ed)</h3>
-      <p class="edu-school">University of Mysore<br>Professional teacher training developing strong analytical, communication, and curriculum design skills applicable to IP research and client reporting.</p>
+      <h3 class="edu-degree">Bachelor of Education (B.Ed.)</h3>
+      <p class="edu-school">University of Mysore &nbsp;·&nbsp; CGPA: 9.8</p>
+      <p class="edu-detail">Specialisation: Physics, Chemistry &amp; Mathematics. Strong analytical and communication skills applicable to IP research and client reporting.</p>
     </div>
     <div class="edu-card reveal">
-      <div class="edu-year">IN PROGRESS</div>
-      <h3 class="edu-degree">Patent Law & IP Research Certification</h3>
-      <p class="edu-school">Indian Institute of Patent and Trademark (IIPTA)<br>Comprehensive training in patent prosecution, IP strategy, and global patent systems. Certificate awaited.</p>
-    </div>
-    <div class="edu-card reveal">
-      <div class="edu-year">IN PROGRESS</div>
-      <h3 class="edu-degree">Patent Law & Analysis (USPTO)</h3>
-      <p class="edu-school">Lawsikho Online Program<br>Covering Searches, Specifications, Prosecution, Litigation and Licensing. Certificate awaited.</p>
-    </div>
-    <div class="edu-card reveal">
-      <div class="edu-year">IN PROGRESS</div>
-      <h3 class="edu-degree">International Job Hunt Accelerator</h3>
-      <p class="edu-school">Lawsikho Online Program<br>Global IP career strategy, professional branding, and international job market preparation.</p>
-    </div>
-    <div class="edu-card reveal">
-      <div class="edu-year">IN PROGRESS</div>
-      <h3 class="edu-degree">WIPO Distance Learning — DL-101</h3>
-      <p class="edu-school">World Intellectual Property Organization (WIPO)<br>Foundational course in intellectual property covering patents, trademarks, copyright, and IP strategy.</p>
+      <div class="edu-year">2017 — 2020</div>
+      <h3 class="edu-degree">B.Sc. — Physics, Chemistry &amp; Mathematics</h3>
+      <p class="edu-school">University of Mysore &nbsp;·&nbsp; CGPA: 8.23</p>
+      <p class="edu-detail">Strong scientific foundation across PCM underpinning technical patent analysis capabilities across chemistry, pharma, and materials domains.</p>
     </div>
   </div>
 </section>
@@ -369,55 +353,103 @@
   <div class="divider"></div>
 
   <div class="project-card reveal">
+    <h3>Patent Claim Drafting — Fire Extinguisher &amp; Solar Cooker Inventions</h3>
+    <div class="tag-list">
+      <span class="tag">Claim Drafting</span><span class="tag">Independent Claims</span><span class="tag">Dependent Claims</span><span class="tag">Patent Specifications</span><span class="tag">Abstract Writing</span><span class="tag">IPC/CPC Classification</span>
+    </div>
+    <p>Drafted independent and dependent claims for two fire extinguisher compositions (Class A and Class B), covering composition ranges, anti-freezing agents, foaming agents, and pressurized vessel materials (steel/carbon fibre) with accurate claim hierarchy. Drafted abstract, background of invention, and detailed description for a fire extinguisher patent application. Additionally drafted independent and dependent claims for a portable solar cooker with a square chamber and reflector-based lid, covering structural elements, materials (plane/curved mirrors), and insulating materials (Styrofoam/cardboard). Applied Boolean search and CPC classification to identify relevant prior art across USPTO and Espacenet.</p>
+  </div>
+
+  <div class="project-card reveal">
     <h3>Wearable IoT Health Monitoring Device — Patentability Search</h3>
     <div class="tag-list">
-      <span class="tag">Prior Art Search</span><span class="tag">USPTO</span><span class="tag">Boolean Search</span><span class="tag">IoT</span><span class="tag">AI Healthcare</span><span class="tag">A61B5/00</span><span class="tag">G16H40/67</span>
+      <span class="tag">Prior Art Search</span><span class="tag">USPTO</span><span class="tag">Boolean Search</span><span class="tag">IoT</span><span class="tag">AI Healthcare</span><span class="tag">CPC: A61B5/00</span><span class="tag">G16H40/67</span>
     </div>
-    <p>Conducted a comprehensive patentability search for an AI-powered IoT wristband health monitoring device equipped with heart rate, SpO2, temperature, and motion sensors. Designed advanced Boolean and proximity search strings across USPTO, Espacenet, and Google Patents using CPC codes. Assessed novelty and non-obviousness of the invention's AI prediction algorithm and multi-device synchronization features.</p>
+    <p>Conducted a comprehensive patentability search for an AI-powered IoT wristband — designed Boolean and proximity search strings across USPTO, Espacenet, and Google Patents using CPC codes; assessed novelty and non-obviousness of the AI prediction algorithm and multi-device sync features.</p>
   </div>
 
   <div class="project-card reveal">
     <h3>Opposition Statement — Aluminium Based Laminate Patent</h3>
     <div class="tag-list">
-      <span class="tag">Opposition Proceedings</span><span class="tag">Grounds of Opposition</span><span class="tag">Prior Art Search</span><span class="tag">Materials Science</span><span class="tag">Claim Analysis</span><span class="tag">Patent Drafting</span>
+      <span class="tag">Opposition Proceedings</span><span class="tag">Grounds of Opposition</span><span class="tag">Prior Art Search</span><span class="tag">Materials Science</span><span class="tag">Claim Analysis</span>
     </div>
-    <p>Drafted a comprehensive opposition statement against a patent application for an aluminium based laminate. Conducted targeted prior art searches to identify relevant references, analyzed the patent claims for lack of novelty and inventive step, identified strong grounds of opposition, and structured a detailed written statement supporting the opposition under applicable patent law provisions.</p>
+    <p>Drafted an opposition statement against a patent for an aluminium based laminate — conducted prior art searches, analyzed claims for lack of novelty and inventive step, and structured a written statement under applicable patent law provisions.</p>
   </div>
 
   <div class="project-card reveal">
-    <h3>FTO Analysis — Pharmaceutical & Biotechnology Domain</h3>
+    <h3>FTO Analysis — Pharmaceutical &amp; Biotechnology Domain</h3>
     <div class="tag-list">
       <span class="tag">FTO Analysis</span><span class="tag">Infringement Research</span><span class="tag">Pharma</span><span class="tag">Biotech</span><span class="tag">Claim Mapping</span>
     </div>
-    <p>Performed Freedom-to-Operate analysis across pharmaceutical and biotechnology inventions, identifying claim overlaps and freedom zones across Indian, U.S., and EU jurisdictions. Delivered structured FTO reports with claim-by-claim mapping and actionable risk assessments for client portfolios.</p>
+    <p>Conducted FTO analysis across pharma and biotech inventions — identified claim overlaps and freedom zones across India, U.S., and EU; delivered structured reports with claim-by-claim mapping and risk assessments.</p>
   </div>
 
   <div class="project-card reveal">
     <h3>IP Landscape Report — Emerging Technology Domains</h3>
     <div class="tag-list">
-      <span class="tag">Landscape Analysis</span><span class="tag">IPC/CPC Classification</span><span class="tag">Derwent Innovation</span><span class="tag">Patent Analytics</span><span class="tag">Competitive Intelligence</span>
+      <span class="tag">Landscape Analysis</span><span class="tag">IPC/CPC Classification</span><span class="tag">Patent Analytics</span><span class="tag">Competitive Intelligence</span>
     </div>
-    <p>Built patent landscape reports using Derwent Innovation and Orbit Intelligence to benchmark competitive portfolios, track filing trends, and identify white spaces for strategic IP positioning across multiple technology sectors.</p>
+    <p>Built patent landscape reports to benchmark competitive portfolios, track filing trends, and identify white spaces for strategic IP positioning across multiple technology sectors.</p>
+  </div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-label">// 06. Certifications</div>
+  <h2 class="section-title">Certifications &amp; Training</h2>
+  <div class="divider"></div>
+  <div class="cert-grid">
+    <div class="cert-card reveal">
+      <div class="cert-status">In Progress</div>
+      <div class="cert-name">Patent Law &amp; IP Research Certification</div>
+      <div class="cert-org">Indian Institute of Patent and Trademark (IIPTA)</div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-status">In Progress</div>
+      <div class="cert-name">Patent Law &amp; Analysis (USPTO)</div>
+      <div class="cert-org">Lawsikho Online Program</div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-status">In Progress</div>
+      <div class="cert-name">DL-101 — Introduction to Intellectual Property</div>
+      <div class="cert-org">WIPO Distance Learning</div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-status done">Certified</div>
+      <div class="cert-name">Six Sigma White Belt</div>
+      <div class="cert-org">Certified</div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-status done">Certified</div>
+      <div class="cert-name">Six Sigma Yellow Belt</div>
+      <div class="cert-org">Certified</div>
+    </div>
+    <div class="cert-card reveal">
+      <div class="cert-status done">Certified</div>
+      <div class="cert-name">Digital Marketing Fundamentals</div>
+      <div class="cert-org">Certified</div>
+    </div>
   </div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="section-label">// 06. Contact</div>
+  <div class="section-label">// 07. Contact</div>
   <h2 class="section-title">Let's Connect</h2>
   <div class="divider"></div>
   <div class="contact-wrapper">
     <div class="contact-info reveal">
       <h3>Get In Touch</h3>
       <div class="contact-item"><span>📍</span><span>India</span></div>
-      <div class="contact-item"><span>💼</span><span><a href="https://linkedin.com" target="_blank">LinkedIn — Sneha M J</a></span></div>
-      <div class="contact-item"><span>📧</span><span><a href="/cdn-cgi/l/email-protection#b9cad7dcd1d8d4d3f9dcd4d8d0d597dad6d4"><span class="__cf_email__" data-cfemail="e0938e8588818d8aa0858d81898cce838f8d">[email&#160;protected]</span></a></span></div>
-      <div class="contact-item"><span>🔍</span><span>Open to Patent Analyst & IP Research Roles</span></div>
+      <div class="contact-item"><span>📧</span><span><a href="/cdn-cgi/l/email-protection#89fae7ece1e8e0f9fbbfb8bcc9eee4e8e0e5a7eae6e4"><span class="__cf_email__" data-cfemail="2f5c414a474e465f5d191e1a6f48424e4643014c4042">[email&#160;protected]</span></a></span></div>
+      <div class="contact-item"><span>💼</span><span><a href="https://linkedin.com/in/snehamj2299" target="_blank">linkedin.com/in/snehamj2299</a></span></div>
+      <div class="contact-item"><span>🔍</span><span>Open to Patent Analyst &amp; IP Research Roles</span></div>
     </div>
     <div class="contact-cta reveal">
       <h3>Available for Opportunities</h3>
-      <p>I am actively seeking Patent Analyst and IP Research roles. With experience across global patent systems and a strong technical background in Chemistry, I bring analytical precision and domain expertise to every IP project.</p>
-      <a href="/cdn-cgi/l/email-protection#a3d0cdc6cbc2cec9e3c6cec2cacf8dc0ccce" class="btn-primary" style="align-self:flex-start;">Send a Message</a>
+      <p>I am actively seeking Patent Analyst and IP Research roles. With hands-on experience across global patent systems and a strong technical background in Chemistry, I bring analytical precision and domain expertise to every IP project.</p>
+      <a href="/cdn-cgi/l/email-protection#1f6c717a777e766f6d292e2a5f78727e7673317c7072" class="btn-primary" style="align-self:flex-start;">Send a Message</a>
     </div>
   </div>
 </section>
@@ -429,10 +461,9 @@
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
 
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.nav-links a');
-  window.addEventL
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAl

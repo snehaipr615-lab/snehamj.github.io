@@ -454,14 +454,14 @@
     <div class="contact-info reveal">
       <h3>Get In Touch</h3>
       <div class="contact-item"><span>📍</span><span>India</span></div>
-      <div class="contact-item"><span>📧</span><span><a href="/cdn-cgi/l/email-protection#89fae7ece1e8e0f9fbbfb8bcc9eee4e8e0e5a7eae6e4"><span class="__cf_email__" data-cfemail="2f5c414a474e465f5d191e1a6f48424e4643014c4042">[email&#160;protected]</span></a></span></div>
+      <div class="contact-item"><span>📧</span><span><a href="mailto:snehaipr615@gmail.com">snehaipr615@gmail.com</a></span></div>
       <div class="contact-item"><span>💼</span><span><a href="https://linkedin.com/in/snehamj2299" target="_blank">linkedin.com/in/snehamj2299</a></span></div>
       <div class="contact-item"><span>🔍</span><span>Open to Patent Analyst &amp; IP Research Roles</span></div>
     </div>
     <div class="contact-cta reveal">
       <h3>Available for Opportunities</h3>
       <p>I am actively seeking Patent Analyst and IP Research roles. With hands-on experience across global patent systems and a strong technical background in Chemistry, I bring analytical precision and domain expertise to every IP project.</p>
-      <a href="/cdn-cgi/l/email-protection#1f6c717a777e766f6d292e2a5f78727e7673317c7072" class="btn-primary" style="align-self:flex-start;">Send a Message</a>
+      <a href="mailto:snehaipr615@gmail.com" class="btn-primary" style="align-self:flex-start;">Send a Message</a>
     </div>
   </div>
 </section>
@@ -471,8 +471,19 @@
   <p>Crafted for IP Excellence</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
-  document.querySelectorAll
+  document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id'); });
+    navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : ''; });
+  });
+</script>
+</body>
+</html>
